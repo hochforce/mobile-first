@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+:root {
+  font-size: 62.5%;
+
+  --header-bg-color: hsl(218, 17%, 62%);
+  --title-bg-color: hsl(275, 18%, 79%);
+  --title-color: hsl(0, 100%, 100%);
+  --bg-color: hsl(233, 100%, 97%);
+  --paragraph: hsl(274, 84%, 12%);
+  --title-card-bg: hsl(312, 91%, 96%);
+  --title-card-text: hsl(232, 17%, 35%);
+} 
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.page{
+  width: 38.4rem;
+  background-color: var(--bg-color);
+}
+header{
+  height: 27.9rem;
+  background-color: var(--header-bg-color);
+  text-align: center;
+
+  padding-bottom: 2.9rem;
+}
+header img{
+  margin-block: 3.2rem;
+}
+
+header h1{
+  background-color: var(--title-bg-color);
+  color: var(--title-color);
+  text-shadow: -0.1rem 0.1rem 0.3rem black;
+  font-size: 4rem;
+}
+h2,
+h1{
+  font-family: 'Staatliches', sans-serif;
+  text-transform: uppercase;
+}
+.wrapper{
+  
+  padding:  1.4rem 3.2rem 6rem;
+
+  display: grid;
+  gap: 3.2rem;
+}
+.wrapper p{
+  font-family: 'Palanquin', sans-serif;
+  margin-bottom: 3.1rem;
+  font-size: 2rem;
+  color: var(--paragraph);
+  text-align: center;
+}
+.wrapper .card{
+position: relative;
+}
+.wrapper .card h2{
+  background-color: var(--title-card-bg);
+  color: var(--title-card-text);
+  width: 11.2rem;
+  height: 3.5rem;
+
+  border-radius: 50px;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+}
