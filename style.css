@@ -14,6 +14,9 @@
   --title-card-bg: hsl(312, 91%, 96%);
   --title-card-text: hsl(232, 17%, 35%);
 } 
+#desktop{
+  display: none;
+}
 body{
   display: flex;
   flex-direction: column;
@@ -46,24 +49,24 @@ h1{
   font-family: 'Staatliches', sans-serif;
   text-transform: uppercase;
 }
-.wrapper{
+.wrapper .cards{
   
   padding:  1.4rem 3.2rem 6rem;
 
   display: grid;
   gap: 3.2rem;
 }
-.wrapper p{
+.wrapper .cards p{
   font-family: 'Palanquin', sans-serif;
   margin-bottom: 3.1rem;
   font-size: 2rem;
   color: var(--paragraph);
   text-align: center;
 }
-.wrapper .card{
+.wrapper .cards .card{
 position: relative;
 }
-.wrapper .card h2{
+.wrapper .cards .card h2{
   background-color: var(--title-card-bg);
   color: var(--title-card-text);
   width: 11.2rem;
@@ -80,4 +83,73 @@ position: relative;
   justify-content: center;
 
   font-size: 2rem;
+}
+
+@media (min-width: 760px) {
+  #mobile{
+    display: none;
+  }
+  #desktop{
+    display: initial;
+  }
+  .page{
+    width: 100%;
+
+    display: flex;
+  }
+  header{
+    height: 100vh;
+    width: 37.7rem;
+    background-color: var(--header-bg-color);
+    
+   
+    padding-bottom: 2.9rem;
+  }
+  header .paragraph{
+    margin: 5rem 5.4rem;
+
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 2.5rem;
+    color: var(--title-color);
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrapper .cards{
+   
+    display: grid;
+
+    grid-template-areas: "A B C" "D E F";
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-rows: 1fr 1fr; */
+  }
+ 
+  .wrapper .cards div:nth-child(1){
+    grid-area: A;
+  }
+  .wrapper .cards div:nth-child(2){
+    grid-area: B;
+  }
+  .wrapper .cards div:nth-child(3){
+    grid-area: C;
+  }
+  .wrapper .cards div:nth-child(4){
+    grid-area: D;
+  }
+  .wrapper .cards div:nth-child(5){
+    grid-area: E;
+  }
+  .wrapper .cards div:nth-child(6){
+    grid-area: F;
+  }
+
+  footer{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    margin-block: 4.6rem;
+  }
 }
